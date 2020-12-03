@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 // your code goes here
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send("Hello world!");
 });
 app.post("/add", (req, res) => {
@@ -87,7 +87,7 @@ app.post("/multiply", (req, res) => {
   }
   res.send(obj);
 });
-app.post("/devide", (req, res) => {
+app.post("/divide", (req, res) => {
   const num1 = req.body.num1;
   const num2 = req.body.num2;
   const obj = {
